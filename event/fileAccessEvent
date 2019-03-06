@@ -1,0 +1,81 @@
+@prefix : <http://purl.org/sepses/vocab/event/fileAccess#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sev: <http://sepses.ifs.tuwien.ac.at/vocab/event/sepsesEvent> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:FileAccessEvent a rdf:Class ;
+	rdfs:subClassOf sev:Event .
+
+:FileAccessType a rdf:Class ;
+	skos:subClassOf sev:Action .
+
+:Program a rdf:Class ;
+	rdfs:subClassOf sev:Actor .
+
+:Host a rdf:Class ;
+	rdfs:subClassOf sev:Place .
+	
+:User a rdf:Class ;
+	rdfs:subClassOf sev:Actor .
+	
+:File a rdfs:Class ;
+	rdfs:subClassOf sev:Object .
+
+:timestamp a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		xsd:Timestamp .
+	
+:hasFileAccessType a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:FileAccessType .
+	
+:fileAccessTypeName a rdfs:Property ;
+	rdfs:domain		:FileAccessType ;
+	rdfs:range		rdfs:Literal .
+	
+:hasSourceHost a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:Host.
+	
+:hasTargetHost a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:Host.
+	
+:hostName a rdfs:Property ;
+	rdfs:domain		:Host ;
+	rdfs:range		rdfs:Literal.
+	
+:hasUser	a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:User .
+	
+:userName	a rdfs:Property ;
+	rdfs:domain		:User ;
+	rdfs:range		rdfs:Literal .
+	
+:hasSourceFile	a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:File .
+	
+:hasTargetFile	a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:File .
+	
+:fileName	a rdfs:Property ;
+	rdfs:domain		:File ;
+	rdfs:range		rdfs:Literal .
+
+:hasProgram a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		:Program .
+	
+:programName a rdfs:Property ;
+	rdfs:domain		:Program ;
+	rdfs:range		rdfs:Literal .
+
+:eventID a rdfs:Property ;
+	rdfs:domain		:FileAccessEvent ;
+	rdfs:range		xsd:Int . 

@@ -1,0 +1,48 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/event/eventProperty#> .
+@prefix ble: <http://sepses.ifs.tuwien.ac.at/vocab/event/baseLogEvent#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix re: <http://purl.org/sepses/vocab/regex/regexPattern#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/event/eventProperty> a owl:Ontology .
+
+:EventProperty a rdfs:Class .
+	
+:User  a rdfs:Class .
+
+:Service a rdfs:Class .
+
+:IPAddress a rdfs:Class .
+
+:Port a rdfs:Class .
+
+:Session a rdfs:Class .
+
+:hasPropertyRegexPattern a rdf:Property ;
+	rdfs:subPropertyOf ble:hasRegexPattern ;
+		rdfs:domain :EventProperty ;
+		rdfs:range  re:Regex .
+	
+:userName a rdf:Property ;
+    rdfs:domain  :User ;
+	rdfs:range   rdfs:Literal .
+
+:ipAddress a rdf:Property ;
+		rdfs:subPropertyOf cl:ipAddress ;
+		rdfs:domain		:IPAddress ;
+		rdfs:range		rdfs:Literal .
+		
+:serviceID a rdf:Property ;
+		rdfs:domain		:Service ;
+		rdfs:range		rdfs:Literal .
+
+:portNumber a rdfs:Property ;
+		rdfs:domain		:Port ;
+		rdfs:range		xsd:int .
+		
+:sessionNumber a rdfs:Property ;
+		rdfs:domain		:Session ;
+		rdfs:range		xsd:int .

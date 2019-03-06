@@ -1,0 +1,139 @@
+@prefix : <http://purl.org/sepses/vocab/log/IDSSnortAlertLog#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix sr: <http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#> .
+@prefix syslog: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+
+:IDSSnortAlertLogEntry a rdfs:Class ;
+	rdfs:subClassOf cl:logEntry .
+
+sr:ClassType a rdfs:Class .
+
+sr:Protocol a rdfs:Class .
+
+sr:IPAddress a rdfs:Class .
+
+sr:Reference a rdfs:Class .
+
+:hasTimestamp a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range xsd:dateTime .
+	
+
+:hasSignatureGenerator a rdf:Property ;
+	rdf:domain  :IDSSnortAlertLogEntry ;
+	rdfs:range	xsd:integer.
+	
+:hasSignatureId a rdf:Property ;
+	rdfs:domain :IDSSnortAlertLogEntry ;
+	rdfs:range	xsd:integer.
+	
+:hasSignatureRev a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range	xsd:integer.
+	
+:hasMessage a rdf:Property ;
+	rdfs:domain :IDSSnortAlertLogEntry ;
+	rdfs:range	rdfs:Literal .
+	
+:hasClassType a rdf:Property ;
+	rdfs:domain :IDSSnortAlertLogEntry ;
+	rdfs:range   sr:ClassType.
+
+:hasPriority a rdf:Property ;
+       rdfs:domain   :IDSSnortAlertLogEntry ;
+       rdfs:range    xsd:integer.
+
+:hasProtocol a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range	sr:Protocol .
+	
+:hasSourceIp a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range  sr:IPAddress .
+	
+:hasSourcePort a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range	rdfs:Literal .
+	
+:hasDestinationIp a rdf:Property ;
+	rdfs:domain 	:IDSSnortAlertLogEntry ;
+	rdfs:range 	sr:IPAddress .
+	
+:hasDestinationPort a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range rdfs:Literal .
+	
+:hasEthernetSource a rdf:Property ;
+	rdfs:domain :IDSSnortAlertLogEntry ;
+	rdfs:range rdfs:Literal .
+	
+:hasEthernetDestination a rdf:Property ;
+	rdfs:domain	:IDSSnortAlertLogEntry ;
+	rdfs:range	rdfs:Literal .
+	
+:hasEthernetLength a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasTcpFlag a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasTcpSequence a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasTcpAcknowledge a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasTcpLenght a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasTcpWindow a rdfs:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasTimeToLive a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasTypeOfService a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasIdentification a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasDatagramLength a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasIpLength a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasIcmpType a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasIcmpCode a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	
+:hasIcmpId a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		xsd:integer .
+	
+:hasIcmpSequence a rdf:Property ;
+	rdfs:domain		:IDSSnortAlertLogEntry;
+	rdfs:range		rdfs:Literal .
+	

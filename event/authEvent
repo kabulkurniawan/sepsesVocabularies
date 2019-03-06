@@ -1,0 +1,59 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/event/authEvent#> .
+@prefix sev: <http://sepses.ifs.tuwien.ac.at/vocab/event/sepsesEvent#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/event/authEvent> a owl:Ontology .
+
+:AuthEvent a rdf:Class ;
+			rdfs:subClassOf sev:Event .
+			
+:Action a rdfs:Class ;
+			rdfs:subClassOf sev:Action .
+			
+:IPAddress a rdf:Class ;
+	rdfs:subClassOf sev:Actor .
+	
+:User a rdf:Class ;
+	rdfs:subClassOf sev:Actor .
+
+:Host a rdf:Class ;
+	rdfs:subClassOf sev:Place .
+
+:Port a rdf:Class ;
+	rdfs:subClassOf sev:Object .
+	
+:hasUser a rdf:Property ;
+        rdfs:domain  :AuthEvent ;
+		rdfs:range   :User .
+		
+:userName	a rdfs:Property ;
+	rdfs:domain		:User ;
+	rdfs:range		rdfs:Literal .
+
+:hasIPAddress a rdf:Property ;
+		rdfs:domain		:User ;
+		rdfs:range		:IPAddress .
+		
+:ipAddress	a rdfs:Property ;
+	rdfs:domain		:IPAddress ;
+	rdfs:range		rdfs:Literal .
+		
+:usingPort a rdfs:Property ;
+		rdfs:domain		:User ;
+		rdfs:range		:Port .
+		
+:portNumber	a rdfs:Property ;
+	rdfs:domain		:Port ;
+	rdfs:range		xsd:int .
+		
+:hasHost a rdf:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		:Host .
+		
+:hostName a rdfs:Property ;
+	rdfs:domain		:Host ;
+	rdfs:range		rdfs:Literal.
+		

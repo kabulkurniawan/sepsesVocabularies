@@ -1,0 +1,425 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS2BaseMetric
+:hasCVSS2BaseMetric rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :CVSS ;
+                    rdfs:range :CVSS2BaseMetric ;
+                    rdfs:label "hasCVSS2BaseMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS2EnvironmentalMetric
+:hasCVSS2EnvironmentalMetric rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain :CVSS ;
+                             rdfs:range :CVSS2EnvironmentalMetric ;
+                             rdfs:label "hasCVSS2EnvironmentalMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS2TemporalMetric
+:hasCVSS2TemporalMetric rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :CVSS ;
+                        rdfs:range :CVSS2TemporalMetric ;
+                        rdfs:label "hasCVSS2TemporalMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS3BaseMetric
+:hasCVSS3BaseMetric rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf owl:topObjectProperty ;
+                    rdfs:domain :CVSS ;
+                    rdfs:range :CVSS3BaseMetric ;
+                    rdfs:label "hasCVSS3BaseMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS3EnvironmentalMetric
+:hasCVSS3EnvironmentalMetric rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf owl:topObjectProperty ;
+                             rdfs:domain :CVSS ;
+                             rdfs:range :CVSS3EnvironmentalMetric ;
+                             rdfs:label "hasCVSS3EnvironmentalMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS3ModefiedBaseMetric
+:hasCVSS3ModefiedBaseMetric rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf owl:topObjectProperty ;
+                            rdfs:domain :CVSS3EnvironmentalMetric ;
+                            rdfs:range :CVSS3ModifiedBaseMetrics ;
+                            rdfs:label "hasCVSS3ModefiedBaseMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#hasCVSS3TemporalMetric
+:hasCVSS3TemporalMetric rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf owl:topObjectProperty ;
+                        rdfs:domain :CVSS ;
+                        rdfs:range :CVSS3TemporalMetric ;
+                        rdfs:label "hasCVSS3TemporalMetric" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#accessComplexity
+:accessComplexity rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :CVSS2BaseMetric ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "accessComplexity" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#accessVector
+:accessVector rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CVSS2BaseMetric ;
+              rdfs:range xsd:string ;
+              rdfs:label "accessVector" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#attackComplexity
+:attackComplexity rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :CVSS3BaseMetric ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "attackComplexity" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#attackVector
+:attackVector rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CVSS3BaseMetric ;
+              rdfs:range xsd:string ;
+              rdfs:label "attackVector" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#authentication
+:authentication rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :CVSS2BaseMetric ;
+                rdfs:range xsd:string ;
+                rdfs:label "authentication" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#availabilityImpact
+:availabilityImpact rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :CVSS2BaseMetric ,
+                                :CVSS3BaseMetric ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "availabilityImpact" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#availabilityRequirement
+:availabilityRequirement rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :CVSS2EnvironmentalMetric ,
+                                     :CVSS3EnvironmentalMetric ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "availabilityRequirement" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#baseScore
+:baseScore rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :CVSS2BaseMetric ,
+                       :CVSS3BaseMetric ;
+           rdfs:range xsd:decimal ;
+           rdfs:label "baseScore" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#collateralDamagePotential
+:collateralDamagePotential rdf:type owl:DatatypeProperty ;
+                           rdfs:subPropertyOf owl:topDataProperty ;
+                           rdfs:domain :CVSS2EnvironmentalMetric ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "collateralDamagePotential" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#confidentialityImpact
+:confidentialityImpact rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf owl:topDataProperty ;
+                       rdfs:domain :CVSS2BaseMetric ,
+                                   :CVSS3BaseMetric ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "confidentialityImpact" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#confidentialityRequirement
+:confidentialityRequirement rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain :CVSS2EnvironmentalMetric ,
+                                        :CVSS3EnvironmentalMetric ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "confidentialityRequirement" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#exploitCodeMaturity
+:exploitCodeMaturity rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :CVSS3TemporalMetric ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "exploitCodeMaturity" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#exploitabilityScore
+:exploitabilityScore rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :CVSS2BaseMetric ,
+                                 :CVSS3BaseMetric ;
+                     rdfs:range xsd:decimal ;
+                     rdfs:label "exploitabilityScore" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#impactScore
+:impactScore rdf:type owl:DatatypeProperty ;
+             rdfs:domain :CVSS2BaseMetric ,
+                         :CVSS3BaseMetric ;
+             rdfs:range xsd:decimal ;
+             rdfs:label "impactScore" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#integrityImpact
+:integrityImpact rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :CVSS2BaseMetric ,
+                             :CVSS3BaseMetric ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "integrityImpact" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#integrityRequirement
+:integrityRequirement rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :CVSS2EnvironmentalMetric ,
+                                  :CVSS3EnvironmentalMetric ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "integrityRequirement" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedAttackComplexity
+:modifiedAttackComplexity rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :attackComplexity ;
+                          rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                          rdfs:label "modifiedAttackComplexity" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedAttackVector
+:modifiedAttackVector rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :attackVector ;
+                      rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "modifiedAttackVector" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedAvailability
+:modifiedAvailability rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf :availabilityImpact ;
+                      rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                      rdfs:range xsd:string ;
+                      rdfs:label "modifiedAvailability" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedConfidentiality
+:modifiedConfidentiality rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :confidentialityImpact ;
+                         rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "modifiedConfidentiality" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedIntegrity
+:modifiedIntegrity rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :integrityImpact ;
+                   rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "modifiedIntegrity" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedPrivilegesRequired
+:modifiedPrivilegesRequired rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf :privilegesRequired ;
+                            rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "modifiedPrivilegesRequired" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedScope
+:modifiedScope rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :scope ;
+               rdfs:domain :CVSS3ModifiedBaseMetrics ;
+               rdfs:range xsd:string ;
+               rdfs:label "modifiedScope" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#modifiedUserInteraction
+:modifiedUserInteraction rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf :userInteraction ;
+                         rdfs:domain :CVSS3ModifiedBaseMetrics ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "modifiedUserInteraction" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#obtainAllPrivilege
+:obtainAllPrivilege rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :CVSS2BaseMetric ;
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "obtainAllPrivilege" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#obtainOtherPrivilege
+:obtainOtherPrivilege rdf:type owl:DatatypeProperty ;
+                      rdfs:subPropertyOf owl:topDataProperty ;
+                      rdfs:domain :CVSS2BaseMetric ;
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "obtainOtherPrivilege" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#obtainUserPrivilege
+:obtainUserPrivilege rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :CVSS2BaseMetric ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "obtainUserPrivilege" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#privilegesRequired
+:privilegesRequired rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :CVSS3BaseMetric ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "privilegesRequired" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#remediationLevel
+:remediationLevel rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :CVSS3TemporalMetric ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "remediationLevel" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#reportConfidence
+:reportConfidence rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdfs:domain :CVSS3TemporalMetric ;
+                  rdfs:range xsd:string ;
+                  rdfs:label "reportConfidence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#scope
+:scope rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :CVSS3BaseMetric ;
+       rdfs:range xsd:string ;
+       rdfs:label "scope" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#targetDistribution
+:targetDistribution rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain :CVSS2EnvironmentalMetric ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "targetDistribution" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#userInteraction
+:userInteraction rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :CVSS3BaseMetric ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "userInteraction" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#userInteractionRequired
+:userInteractionRequired rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain :CVSS2BaseMetric ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "userInteractionRequired" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#vectorString
+:vectorString rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :CVSS2BaseMetric ,
+                          :CVSS3BaseMetric ;
+              rdfs:range xsd:string ;
+              rdfs:label "vectorString" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :CVSS2BaseMetric ,
+                     :CVSS3BaseMetric ;
+         rdfs:range xsd:string ;
+         rdfs:label "version" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS
+:CVSS rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:label "CVSS" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS2BaseMetric
+:CVSS2BaseMetric rdf:type owl:Class ;
+                 rdfs:subClassOf :CVSS ;
+                 rdfs:label "CVSS2BaseMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS2EnvironmentalMetric
+:CVSS2EnvironmentalMetric rdf:type owl:Class ;
+                          rdfs:subClassOf :CVSS ;
+                          rdfs:label "CVSS2EnvironmentalMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS2TemporalMetric
+:CVSS2TemporalMetric rdf:type owl:Class ;
+                     rdfs:subClassOf :CVSS ;
+                     rdfs:label "CVSS2TemporalMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS3BaseMetric
+:CVSS3BaseMetric rdf:type owl:Class ;
+                 rdfs:subClassOf :CVSS ;
+                 rdfs:label "CVSS3BaseMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS3EnvironmentalMetric
+:CVSS3EnvironmentalMetric rdf:type owl:Class ;
+                          rdfs:subClassOf :CVSS ;
+                          rdfs:label "CVSS3EnvironmentalMetric" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS3ModifiedBaseMetrics
+:CVSS3ModifiedBaseMetrics rdf:type owl:Class ;
+                          rdfs:subClassOf :CVSS3EnvironmentalMetric ;
+                          rdfs:label "CVSS3ModifiedBaseMetrics" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cvss#CVSS3TemporalMetric
+:CVSS3TemporalMetric rdf:type owl:Class ;
+                     rdfs:subClassOf :CVSS ;
+                     rdfs:label "CVSS3TemporalMetric" .
+
+
+###  Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi
+

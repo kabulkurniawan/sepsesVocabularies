@@ -1,0 +1,410 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule> a owl:Ontology .
+
+
+:SnortRule a rdfs:Class .
+
+:RuleHeader a rdfs:Class .
+
+:RuleOption a rdfs:Class .
+
+:Action a rdfs:Class .
+
+:Protocol a rdfs:Class .
+
+:IPAddress a rdfs:Class .
+
+:Reference a rdfs:Class .
+
+:ClassType a rdfs:Class .
+
+:Metadata a rdfs:Class .
+
+
+:hasRuleHeader a rdf:Property ; 
+	rdfs:domain :SnortRule ;
+    rdfs:range :RuleHeader .
+	
+:hasRuleOption a rdf:Property ;
+	rdfs:domain :SnortRule ;
+    rdfs:range :RuleOption .
+	
+:hasAction a rdf:Property ;
+	rdfs:domain :RuleHeader ;
+    rdfs:range :Action .
+	
+:hasProtocol a rdf:Property ;
+	rdfs:domain :RuleHeader ;
+    rdfs:range :Protocol .
+	
+:hasSourceIP a rdf:Property ;
+	rdfs:domain :RuleHeader ;
+    rdfs:range :IPAddress .
+	
+:hasSourcePort a rdf:Property ;
+	rdfs:domain :RuleHeader ;
+    rdfs:range rdfs:Literal .
+
+:hasDestinationIP a rdf:Property ;
+	rdfs:domain :RuleHeader ;
+    rdfs:range :IPAddress .
+	
+:hasDestinationPort a rdf:Property ;
+	rdfs:domain :RuleHeader ;
+    rdfs:range rdfs:Literal .
+	
+:hasReference a rdf:Property ;
+	rdfs:domain :RuleOption ;
+    rdfs:range :Reference .
+	
+:hasClassType a rdf:Property ;
+	rdfs:domain :RuleOption ;
+    rdfs:range :ClassType .
+
+:hasMetadata a rdf:Property ;
+	rdfs:domain :RuleOption ;
+    rdfs:range :Metadata .
+
+:operator a rdf:Property ;
+    rdfs:domain :RuleHeader ;
+    rdfs:range rdfs:Literal .
+
+
+:msg a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:reference a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range :Reference .
+	
+:gid a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:sid a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:rev a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:classtype a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range :ClassType .
+	
+:priority a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:metadata a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:content a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:protected_content a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:hash a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:length a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:nocase a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:rawbytes a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:depth a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:offset a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:distance a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:within a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_client_body a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_cookie a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_raw_cookie a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_header a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_raw_header a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_method a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+
+:http_uri a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_raw_uri a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_stat_code a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_stat_msg a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:http_encode a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:fast_pattern a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:uricontent a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:urilen a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:isdataat a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:pcre a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:pkt_data a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:file_data a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:base64_decode a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:base64_data a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:byte_test a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:byte_jump a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:byte_extract a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:byte_math a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:ftpbounce a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:asn1 a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:cvs a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:dce_iface a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:dce_opnum a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:dce_stub_data a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:sip_method a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:sip_stat_code a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:sip_header a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:sip_body a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:gtp_type a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:gtp_info a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:gtp_version a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:ssl_version a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:ssl_state a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:fragoffset a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:ttl a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:tos a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:id a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:ipopts a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:fragbits a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:dsize a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:flags a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:flow a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:flowbits a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:seq a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:ack a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:window a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:itype a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:icode a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:icmp_id a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:icmp_seq a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range xsd:integer .
+	
+:rpc a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:ip_proto a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:sameip a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:stream_reassemble a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+	
+:stream_size a rdf:Property ;
+    rdfs:domain :RuleOption ;
+    rdfs:range rdfs:Literal .
+
+:cveId a rdf:Property ;
+    rdfs:domain :Reference ;
+    rdfs:range rdfs:Literal .
+
+:bugtraqId a rdf:Property ;
+   rdfs:domain :Reference ;
+   rdfs:range rdfs:Literal .
+
+:nessusId a rdf:Property ;
+   rdfs:domain :Reference ;
+   rdfs:range rdfs:Literal .
+
+:url a rdf:Property ;
+   rdfs:domain  :Reference ;
+   rdfs:range rdfs:Literal .

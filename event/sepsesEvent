@@ -1,0 +1,137 @@
+@prefix sev: <http://sepses.ifs.tuwien.ac.at/vocab/event/sepsesEvent#> .
+@prefix sek:  <http://sepses.ifs.tuwien.ac.at/knowledge/sepsesEventKnowledge#> .
+@prefic bgk: <http://sepses.ifs.tuwien.ac.at/knowledge/bg-knowledge#>
+@prefix emf: <http://events.semantic-multimedia.org/ontology/2009/4/15/model.owl#> .
+@prefix dul: <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix owl2xml: <http://www.w3.org/2006/12/owl2-xml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+#################################### ontology description ##
+
+<http://sepses.ifs.tuwien.ac.at/vocab/event/sepsesEvent>
+  rdf:type owl:Ontology ;
+  rdfs:label "A Simple Ontology for Security Event"@en ;
+.
+
+#################################### taken from other vocabulary ##
+
+dul:Event a owl:Class.
+dul:EventType a owl:Class.
+dul:Quality a owl:Class.
+dul:hasRegion a rdfs:Property.
+
+#################################### classes and properties - in progress ##
+
+sev:SecurityEvent a rdfs:Class;
+		rdfs:subClassOf dul:Event.
+		
+sev:SecurityEventType a rdfs:Class;
+		rdfs:subClassOf dul:EventType.
+
+sev:Time	a rdfs:Class;
+		rdfs:subClassOf dul:Quality.
+
+sev:Actor	a rdfs:Class;
+		rdfs:subClassOf dul:Object.
+
+sev:Place a rdfs:Class;
+		rdfs:subClassOf dul:Object.
+
+sev:Object a rdfs:Class;
+		rdfs:subClassOf dul:Object.
+
+sev:IsIdentifiedBy a rdf:Property.
+		
+
+#################################### instances #########
+
+##################Event Pattern Description############
+
+:partDesc1 a emf:EventParticipationDescription;
+		  dul:defines :timeParam1, :descEvent1, :participant1, :participant2, :participant3.
+		  
+:partDesc2 a emf:EventParticipationDescription;
+		  dul:defines :timeParam2, :descEvent2, :participant1, :participant2, :participant3.
+		  
+:causDesc1 a emf:EventCausalityDescription;
+		  dul:defines :cause1, :effect1.
+
+:timeParam1 a emf:TimeParameter;
+		dul:parametrizes :time1.
+
+:timeParam2 a emf:TimeParameter;
+		dul:parametrizes :time2.
+		
+:participant1 a emf:Participant;
+		dul:classifies :actor1.
+
+:participant2 a emf:Participant;
+		dul:classifies :place1.
+		
+:participant2 a emf:Participant;
+		dul:classifies :object1.
+		
+:cause1 a emf:Cause;
+		dul:classifies :pdfDownload1.
+
+:effect1 a emf:Effect;
+		dul:classifies :pdfFileExecution1.
+		  
+##################Event Pattern Situation##############
+
+:partSit1 a emf:EventParticipationSituation;
+		 dul:satisfies :partDesc1.
+
+:partSit2 a emf:EventParticipationSituation;
+		 dul:satisfies :partDesc2.
+
+:causSit1 a emf:EventCausalitySituation;
+		 dul:satisfies :causDesc1.
+		 
+##################Event Description#####################
+
+:pdfFileExecution1  a :SecurityEvent;
+	   :SecurityEventType sbgk:MaliciousFileExecution;
+	dul:isClassifiedBy :partDesc1;
+	dul:isEventIncludeIn :partSit1, :causSit1;
+	emf:hasEventParticipant :actor1, :place1, :object1;
+	dul:hasQuality  :timeq1.
+
+:pdfDownload1  a :SecurityEvent;
+	   :SecurityEventType sbgk:MaliciousDownloadedFile;
+	dul:isClassifiedBy :partDesc2;
+	dul:isEventIncludeIn :partSit2, :causSit1;
+	emf:hasEventParticipant :actor1, :place1, :object1;
+	dul:hasQuality  :timeq2.
+	
+:descEvent1 a emf:DescribedEvent;
+		 dul:classifies :pdfFileExecution1.
+		 
+:descEvent2 a emf:DescribedEvent;
+		 dul:classifies :pdfDownload1.
+		 
+:timeq1 a sev:Time;
+		:IsIdentifiedBy :time1.
+		
+:timeq2 a sev:Time;
+		:IsIdentifiedBy :time2.
+		
+:actor1 a sev:Actor;
+		:IsIdentifiedBy bgk:bgf3afe4ef-f804-47a2-bf15-44c07d5ec90a.
+		
+:place1 a sev:Place;
+		:IsIdentifiedBy bgk:bg93f2287a-07e2-4757-874b-990f37a26db9.
+
+:object1 a sev:Object;
+		:IsIdentifiedBy bgk:bg6b4e0502-8e58-48ed-96bd-79ff1a2f4fbd.
+		
+:time1 	a dul:TimeInterval;
+		xsd:dateTime "2018-10-10 08:46:00:00".
+
+:time2	a dul:TimeInterval;
+		xsd:dateTime "2018-11-10 08:40:00:00".
+		

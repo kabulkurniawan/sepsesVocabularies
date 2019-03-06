@@ -1,0 +1,155 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#hasProduct
+:hasProduct rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            rdfs:domain :CPE ;
+            rdfs:range :Product ;
+            rdfs:label "hasProduct" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#hasVendor
+:hasVendor rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty ;
+           rdfs:domain :Product ;
+           rdfs:range :Vendor ;
+           rdfs:label "hasVendor" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#CPEVersion
+:CPEVersion rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :CPE ;
+            rdfs:range xsd:string ;
+            rdfs:label "CPEVersion" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#edition
+:edition rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Product ;
+         rdfs:range xsd:string ;
+         rdfs:label "edition" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#language
+:language rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Product ;
+          rdfs:range xsd:string ;
+          rdfs:label "language" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#other
+:other rdf:type owl:DatatypeProperty ;
+       rdfs:subPropertyOf owl:topDataProperty ;
+       rdfs:domain :Product ,
+                   :Vendor ;
+       rdfs:range xsd:string ;
+       rdfs:label "other" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#part
+:part rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :CPE ;
+      rdfs:range xsd:string ;
+      rdfs:label "part" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#productName
+:productName rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Product ;
+             rdfs:range xsd:string ;
+             rdfs:label "productName" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#softwareEdition
+:softwareEdition rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Product ;
+                 rdfs:range xsd:string ;
+                 rdfs:label "softwareEdition" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#targetHardware
+:targetHardware rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Product ;
+                rdfs:range xsd:string ;
+                rdfs:label "targetHardware" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#targetSoftware
+:targetSoftware rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Product ;
+                rdfs:range xsd:string ;
+                rdfs:label "targetSoftware" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#update
+:update rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Product ;
+        rdfs:range xsd:string ;
+        rdfs:label "update" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#vendorName
+:vendorName rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Vendor ;
+            rdfs:range xsd:string ;
+            rdfs:label "vendorName" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Product ;
+         rdfs:range xsd:string ;
+         rdfs:label "version" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#CPE
+:CPE rdf:type owl:Class ;
+     rdfs:subClassOf owl:Thing ;
+     rdfs:label "CPE" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#Product
+:Product rdf:type owl:Class ;
+         rdfs:subClassOf owl:Thing ;
+         rdfs:label "Product" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cpe#Vendor
+:Vendor rdf:type owl:Class ;
+        rdfs:subClassOf owl:Thing ;
+        rdfs:label "Vendor" .
+
+
+###  Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi
+

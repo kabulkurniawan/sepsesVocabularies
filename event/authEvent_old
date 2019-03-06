@@ -1,0 +1,62 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/event/authEvent#> .
+@prefix ble: <http://sepses.ifs.tuwien.ac.at/vocab/event/baseLogEvent#> .
+@prefix ep: <http://sepses.ifs.tuwien.ac.at/vocab/event/eventProperty#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/event/authEvent> a owl:Ontology .
+
+:AuthEvent a rdf:Class ;
+			rdfs:subClassOf ble:logEvent .
+			
+:AuthType a rdf:Class .
+			
+:LoginStatus a rdfs:Class .
+
+:LoginFailedType a rdfs:Class .
+
+:hasAuthType a rdf:Property ;
+		rdfs:domain :AuthEvent ;
+		rdfs:range :AuthType .
+
+:hasLoginStatus a rdfs:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		:LoginStatus .
+
+:hasLoginFailedType a rdfs:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		:LoginFailedType .
+		
+:hasUser a rdf:Property ;
+        rdfs:domain  :AuthEvent ;
+		rdfs:range   ep:User .
+
+:hasIPAddress a rdf:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		ep:IPAddress .
+		
+:hasService a rdf:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		ep:Service .
+
+:hasPort a rdfs:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		rdfs:Literal .
+		
+:hasSession a rdfs:Property ;
+		rdfs:domain		:AuthEvent ;
+		rdfs:range		rdfs:Literal .
+		
+:authTypeName a rdfs:Property ;
+		rdfs:domain		:AuthType ;
+		rdfs:range		rdfs:Literal .
+		
+:loginStatusName a rdfs:Property ;
+		rdfs:domain		:LoginStatus ;
+		rdfs:range		rdfs:Literal .
+
+:loginFailedTypeName a rdfs:Property ;
+		rdfs:domain		:LoginFailedType ;
+		rdfs:range		rdfs:Literal .

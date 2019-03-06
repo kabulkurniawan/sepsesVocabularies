@@ -1,0 +1,271 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasConsequence
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasConsequence> rdf:type owl:ObjectProperty ;
+                                                                 rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                 rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence> ;
+                                                                 rdfs:label "hasConsequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasExecutionFlow
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasExecutionFlow> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                   rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow> ;
+                                                                   rdfs:label "hasExecutionFlow" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedAttackPattern
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedAttackPattern> rdf:type owl:ObjectProperty ;
+                                                                          rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                          rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                          rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern> ;
+                                                                          rdfs:label "hasRelatedAttackPattern" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedWeakness
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedWeakness> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                     rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedWeakness> ;
+                                                                     rdfs:label "hasRelatedWeakness" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasSkillRequired
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasSkillRequired> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                   rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired> ;
+                                                                   rdfs:label "hasSkillRequired" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECAbstraction
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECAbstraction> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "CAPECAbstraction" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECId
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECId> rdf:type owl:DatatypeProperty ;
+                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                          rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                          rdfs:range xsd:string ;
+                                                          rdfs:label "CAPECId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECName
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECName> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:label "CAPECName" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECStatus
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECStatus> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                              rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:label "CAPECStatus" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECdescription
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECdescription> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "CAPECdescription" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStep
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStep> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow> ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:label "attackStep" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepDescription
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepDescription> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:subPropertyOf owl:topDataProperty ;
+                                                                        rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow> ;
+                                                                        rdfs:range xsd:string ;
+                                                                        rdfs:label "attackStepDescription" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepPhase
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepPhase> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                  rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow> ;
+                                                                  rdfs:range xsd:string ;
+                                                                  rdfs:label "attackStepPhase" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepTechnique
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepTechnique> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:label "attackStepTechnique" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceImpact
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceImpact> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                    rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:label "consequenceImpact" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceScope
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceScope> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "consequenceScope" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasMitigation
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasMitigation> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                rdfs:range xsd:string .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#likelihoodOfAttack
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#likelihoodOfAttack> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:label "likelihoodOfAttack" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#prerequisites
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#prerequisites> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                rdfs:range xsd:string ;
+                                                                rdfs:label "prerequisites" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternCAPECId
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternCAPECId> rdf:type owl:DatatypeProperty ;
+                                                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                                                              rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern> ;
+                                                                              rdfs:range xsd:string ;
+                                                                              rdfs:label "relatedAttackPatternCAPECId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternNature
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternNature> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                                             rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern> ;
+                                                                             rdfs:range xsd:string ;
+                                                                             rdfs:label "relatedAttackPatternNature" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternViewId
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternViewId> rdf:type owl:DatatypeProperty ;
+                                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                                             rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern> ;
+                                                                             rdfs:range xsd:string ;
+                                                                             rdfs:label "relatedAttackPatternViewId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#resourceRequired
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#resourceRequired> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "resourceRequired" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillDescription
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillDescription> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "skillDescription" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillLevel
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillLevel> rdf:type owl:DatatypeProperty ;
+                                                             rdfs:subPropertyOf owl:topDataProperty ;
+                                                             rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired> ;
+                                                             rdfs:range xsd:string ;
+                                                             rdfs:label "skillLevel" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#typicalSeverity
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#typicalSeverity> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                  rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> ;
+                                                                  rdfs:range xsd:string ;
+                                                                  rdfs:label "typicalSeverity" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC> rdf:type owl:Class ;
+                                                        rdfs:subClassOf owl:Thing ;
+                                                        rdfs:label "CAPEC" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence> rdf:type owl:Class ;
+                                                              rdfs:subClassOf owl:Thing ;
+                                                              rdfs:label "Consequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow> rdf:type owl:Class ;
+                                                                rdfs:subClassOf owl:Thing ;
+                                                                rdfs:label "ExecutionFlow" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Mitigation
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Mitigation> rdf:type owl:Class ;
+                                                             rdfs:subClassOf owl:Thing ;
+                                                             rdfs:label "Mitigation" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf owl:Thing ;
+                                                                       rdfs:label "RelatedAttackPattern" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedWeakness
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedWeakness> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf owl:Thing ;
+                                                                  rdfs:label "RelatedWeakness" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired> rdf:type owl:Class ;
+                                                                rdfs:subClassOf owl:Thing ;
+                                                                rdfs:label "SkillRequired" .
+
+
+###  Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi

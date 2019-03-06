@@ -1,0 +1,122 @@
+@prefix : <http://purl.org/sepses/vocab/log/windowseventLog#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:WindowsEventLogEntry a rdf:Class ;
+	rdfs:subClassOf cl:LogEntry . 
+	
+:Subject a rdf:Class .
+
+:Object a rdf:Class .
+
+:Process a rdf:Class .
+
+:AccessRequest a rdf:Class .
+
+:hasSubject a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range :Subject .
+	
+:hasObject a rdf:Property ;
+	rdfs:domain :WindowsEventLogEntry ;
+	rdfs:range :Object .
+	
+:hasProcess a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range :Process .
+	
+:hasAccess a rdf:Property ;
+	rdfs:domain :WindowsEventLogEntry ;
+	rdfs:range :AccessRequest .
+	
+:securityID a rdf:Property ;
+	rdfs:domain :Subject ;
+	rdfs:range rdfs:Literal .
+	
+:accountName a rdf:Property ;
+	rdfs:domain :Subject ;
+	rdfs:range rdfs:Literal .
+	
+:accountDomain a rdf:Property ;
+	rdfs:domain :Subject ;
+	rdfs:range	rdfs:Literal .
+	
+:logonID a rdf:Property ;
+	rdfs:domain	:Subject ;
+	rdfs:range	rdfs:Literal .
+
+:objectServer a rdf:Property ;
+	rdfs:domain	:Object ;
+	rdfs:range	rdfs:Literal .
+
+:objectType a rdf:Property ;
+	rdfs:domain	:Object ;
+	rdfs:range	rdfs:Literal .
+	
+:objectName a rdf:Property ;
+	rdfs:domain	:Object ;
+	rdfs:range	rdfs:Literal .
+	
+:handleID a rdf:Property ;
+	rdfs:domain	:Object ;
+	rdfs:range	rdfs:Literal .
+
+:resourceAttributes a rdf:Property ;
+	rdfs:domain	:Object ;
+	rdfs:range	rdfs:Literal .	
+	
+:processID a rdf:Property ;
+	rdfs:domain	:Process ;
+	rdfs:range	rdfs:Literal .
+
+:processName a rdf:Property ;
+	rdfs:domain	:Process ;
+	rdfs:range	rdfs:Literal .
+
+:accesses a rdf:Property ;
+	rdfs:domain	:AccessRequest ;
+	rdfs:range	rdfs:Literal .	
+	
+:accessMask a rdf:Property ;
+	rdfs:domain	:AccessRequest ;
+	rdfs:range	rdfs:Literal .	
+	
+:logName a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+	
+:source a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+
+:eventID a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	xsd:Int .	
+	
+:level a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+	
+:User a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+
+:upCode a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+	
+:taskCategory a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+	
+:keyword a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+	
+:computer a rdf:Property ;
+	rdfs:domain	:WindowsEventLogEntry ;
+	rdfs:range	rdfs:Literal .	
+

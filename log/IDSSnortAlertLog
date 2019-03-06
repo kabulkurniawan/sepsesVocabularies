@@ -1,0 +1,277 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix snort: <http://sepses.ifs.tuwien.ac.at/vocab/log/snort#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
+@base <http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog> .
+
+
+<http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog> rdf:type owl:Ontology .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+#imported Properties
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#hasClassType
+:hasClassType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf snort:hasClassType ;
+              rdfs:domain :IDSSnortAlertLogEntry ;
+              rdfs:range  snort:ClassType ;
+              rdfs:label "hasClassType" .
+			  
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#hasProtocol
+:hasProtocol rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf snort:hasProtocol ;
+              rdfs:domain :IDSSnortAlertLogEntry ;
+              rdfs:range  snort:Protocol ;
+              rdfs:label "hasProtocol" .
+			  
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#hasSourceIP
+:hasSourceIP rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf snort:hasSourceIP ;
+              rdfs:domain :IDSSnortAlertLogEntry ;
+              rdfs:range  cl:Host ;
+              rdfs:label "hasSourceIP" .
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#hasDestinationIP
+:hasDestinationIP rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf snort:hasDestinationIP ;
+              rdfs:domain :IDSSnortAlertLogEntry ;
+              rdfs:range  cl:Host ;
+              rdfs:label "hasDestinationIP" .			  
+			  
+		  
+			  
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#datagramLength
+:datagramLength rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :IDSSnortAlertLogEntry ;
+                rdfs:range xsd:integer ;
+                rdfs:label "datagramLength" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#ethernetDestination
+:ethernetDestination rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain :IDSSnortAlertLogEntry ;
+                     rdfs:range rdfs:Literal ;
+                     rdfs:label "ethernetDestination" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#ethernetLength
+:ethernetLength rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :IDSSnortAlertLogEntry ;
+                rdfs:range xsd:integer ;
+                rdfs:label "ethernetLength" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#ethernetSource
+:ethernetSource rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :IDSSnortAlertLogEntry ;
+                rdfs:range rdfs:Literal ;
+                rdfs:label "ethernetSource" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#timestamp
+:timestamp rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf owl:topDataProperty ;
+           rdfs:domain :IDSSnortAlertLogEntry ;
+           rdfs:label "timestamp" .
+
+#imported properties
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#tcpAcknowledge
+:tcpAcknowledge rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf snort:acknowledge ;
+             rdfs:domain :IDSSnortAlertLogEntry ;
+             rdfs:range xsd:integer ;
+             rdfs:label "tcpAcknowledge" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#destinationPort
+:destinationPort rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf snort:destinationPort ;
+                 rdfs:domain :IDSSnortAlertLogEntry ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "destinationPort" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#tcpFlag
+:tcpFlag rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf snort:flag ;
+      rdfs:domain :IDSSnortAlertLogEntry ;
+      rdfs:range rdfs:Literal ;
+      rdfs:label "tcpFlag" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#generatorId
+:signaturGenerator rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf snort:generatorId ;
+             rdfs:domain :IDSSnortAlertLogEntry ;
+             rdfs:range xsd:integer ;
+             rdfs:label "generatorId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#icmpCode
+:icmpCode rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf snort:icmpCode ;
+          rdfs:domain :IDSSnortAlertLogEntry ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "icmpCode" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#icmpId
+:icmpId rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf snort:icmpId ;
+        rdfs:domain :IDSSnortAlertLogEntry ;
+        rdfs:range xsd:integer ;
+        rdfs:label "icmpId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#icmpSequence
+:icmpSequence rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf snort:icmpSequence ;
+              rdfs:domain :IDSSnortAlertLogEntry ;
+              rdfs:range xsd:integer ;
+              rdfs:label "icmpSequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#icmpType
+:icmpType rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf snort:icmpType ;
+          rdfs:domain :IDSSnortAlertLogEntry ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "icmpType" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#identification
+:identification rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf snort:identification ;
+                rdfs:domain :IDSSnortAlertLogEntry ;
+                rdfs:range xsd:integer ;
+                rdfs:label "identification" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#tcpLength
+:tcpLength rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf snort:length ;
+        rdfs:domain :IDSSnortAlertLogEntry ;
+        rdfs:range xsd:integer ;
+        rdfs:label "tcpLength" .
+		
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#ipLength
+:ipLength rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf snort:length ;
+        rdfs:domain :IDSSnortAlertLogEntry ;
+        rdfs:range xsd:integer ;
+        rdfs:label "ipLength" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#message
+:message rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf snort:message ;
+         rdfs:domain :IDSSnortAlertLogEntry ;
+         rdfs:range rdfs:Literal ;
+         rdfs:label "message" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#priority
+:priority rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf snort:priority ;
+          rdfs:domain :IDSSnortAlertLogEntry ;
+          rdfs:range xsd:integer ;
+          rdfs:label "priority" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#tcpSequence
+:tcpSequence rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf snort:sequence ;
+          rdfs:domain :IDSSnortAlertLogEntry ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "ccpSequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#signatureId
+:signatureId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf snort:signatureId ;
+             rdfs:domain :IDSSnortAlertLogEntry ;
+             rdfs:range xsd:integer ;
+             rdfs:label "signatureId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#signatureRev
+:signatureRev rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf snort:signatureRevision ;
+                   rdfs:domain :IDSSnortAlertLogEntry ;
+                   rdfs:range xsd:integer ;
+                   rdfs:label "signatureRev" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#sourcePort
+:sourcePort rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf snort:sourcePort ;
+            rdfs:domain :IDSSnortAlertLogEntry ;
+            rdfs:range xsd:integer ;
+            rdfs:label "sourcePort" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#timeToLive
+:timeToLive rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf snort:timeToLive ;
+            rdfs:domain :IDSSnortAlertLogEntry ;
+            rdfs:range rdfs:Literal ;
+            rdfs:label "timeToLive" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#typeOfService
+:typeOfService rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf snort:typeOfService ;
+               rdfs:domain :IDSSnortAlertLogEntry ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "typeOfService" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#tcpWindow
+:tcpWindow rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf snort:window ;
+        rdfs:domain :IDSSnortAlertLogEntry ;
+        rdfs:range rdfs:Literal ;
+        rdfs:label "tcpWindow" .
+
+#################################################################
+#    Classes
+#################################################################
+
+##imported Class 
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#ClassType
+snort:ClassType rdf:type owl:Class .
+
+
+### http://purl.org/sepses/vocab/log/coreLog#Host
+cl:Host rdf:type owl:Class .
+     
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#Protocol
+snort:Protocol rdf:type owl:Class .
+     
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/log/IDSSnortAlertLog#IDSSnortAlertLogEntry
+:IDSSnortAlertLogEntry rdf:type owl:Class ;
+                       rdfs:subClassOf cl:LogEntry ;
+                       rdfs:label "IDSSnortAlertLogEntry" .
+
+					   
+
+###  Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi

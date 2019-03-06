@@ -1,0 +1,55 @@
+@prefix : <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://purl.org/sepses/vocab/log/coreLog> a owl:Ontology .
+
+
+:Host a rdfs:Class .
+
+:LogEntry a rdfs:Class .
+
+:ipAddress a rdf:Property ;
+    rdfs:domain :Host;
+    rdfs:range rdfs:Literal .
+    
+:ip4Address a rdf:Property ;
+    rdfs:domain :Host ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf :ipAddress .
+    
+:ip6Address a rdf:Property ;
+    rdfs:domain :Host ;
+    rdfs:range rdfs:Literal ;
+    rdfs:subPropertyOf :ipAddress .
+
+:hostName a rdf:Property ;
+    rdfs:domain :Host ;
+    rdfs:range rdfs:Literal .
+
+:logFilePath a rdf:Property ;
+    rdfs:domain :LogEntry ;
+    rdfs:range rdfs:Literal .
+
+:logMessage a rdf:Property ;
+    rdfs:domain :LogEntry ;
+    rdfs:range rdfs:Literal .
+
+:timestamp a rdf:Property ;
+    rdfs:domain :LogEntry ;
+    rdfs:range xsd:dateTime .
+
+:hasLogType a rdfs:Property ;
+	rdfs:domain :LogEntry ;
+	rdfs:range  rdfs:Literal.
+
+:originatesFrom a rdfs:Property ;
+    rdfs:domain :LogEntry ;
+    rdfs:range :Host .
+
+:messageCount a rdfs:Property ;
+   rdfs:domain :LogEntry ;
+   rdfs:range  :Host .

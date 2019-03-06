@@ -1,0 +1,87 @@
+@prefix : <http://purl.org/sepses/vocab/log/firewallLog#> .
+@prefix cl: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix syslog: <http://purl.org/sepses/vocab/log/coreLog#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+:FirewallLogEntry a rdfs:Class ;
+	 rdfs:subClassOf cl:LogEntry . 
+
+:Action a rdfs:Class .
+
+:Protocol a rdfs:Class .
+
+:PolicyId a rdfs:Class .
+
+:Interface a rdfs:Class.
+
+:hasAction a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range  :Action .
+
+:actionName a rdf:Property ;
+	rdfs:domain	:Action ;
+	rdfs:range	rdfs:Literal .
+	
+:hasProtocol a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range	:Protocol .
+	
+:protocolName a rdf:Property ;
+	rdfs:domain	:Protocol ;
+	rdfs:range	rdfs:Literal .
+	
+:hasSourceIp a rdf:Property ;
+	rdfs:domain :FirewallLogEntry;
+	rdfs:range  cl:Host .
+	
+:hasDestinationIp a rdf:Property ;
+	rdfs:domain :FirewallLogEntry;
+	rdfs:range  cl:Host .
+	
+:hasSourcePort a rdfs:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range	xsd:Int.
+	
+:hasDestinationPort a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range	xsd:Int.
+	
+:hasSourceInterface a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range  :Interface.
+
+:hasDestinationInterface a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range  :Interface.
+	
+:interfaceName a rdf:Property ;
+	rdfs:domain	:Interface ;
+	rdfs:range	rdfs:Literal .
+	
+:hasHashCode1 a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range rdfs:Literal .
+	
+:hasHashCode2 a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range rdfs:Literal .
+	
+:hasPolicyId a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range :PolicyId .
+
+:policyId a rdf:Property ;
+	rdfs:domain :PolicyId ;
+	rdfs:range	rdfs:Literal .
+	
+:hasSyslogSeverity a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range	syslog:Severity  .
+
+:hasSyslogFacility a rdf:Property ;
+	rdfs:domain :FirewallLogEntry ;
+	rdfs:range	syslog:Facility  .

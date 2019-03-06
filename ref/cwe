@@ -1,0 +1,326 @@
+@prefix : <http://webprotege.stanford.edu/project/CbFp4zd3Z04CG8H0PUiu5k#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://webprotege.stanford.edu/project/CbFp4zd3Z04CG8H0PUiu5k> .
+
+<http://webprotege.stanford.edu/project/CbFp4zd3Z04CG8H0PUiu5k> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasAplicablePlatform
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasAplicablePlatform> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                    rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#AplicablePlatform> ;
+                                                                    rdfs:label "hasAplicablePlatform" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasCAPEC
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasCAPEC> rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf owl:topObjectProperty ;
+                                                        rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                        rdfs:label "hasCAPEC" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasCommonConsequence
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasCommonConsequence> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                    rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                    rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CommonConsequence> ;
+                                                                    rdfs:label "hasCommonConsequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasDetectionMethod
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasDetectionMethod> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                  rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                  rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#DetectionMethod> ;
+                                                                  rdfs:label "hasDetectionMethod" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasModeOfIntroduction
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasModeOfIntroduction> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                     rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#ModeOfIntroduction> ;
+                                                                     rdfs:label "hasModeOfIntroduction" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasPotentialMitigation
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasPotentialMitigation> rdf:type owl:ObjectProperty ;
+                                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                      rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                      rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#PotentialMitigation> ;
+                                                                      rdfs:label "hasPotentialMitigation" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasRelatedWeakness
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#hasRelatedWeakness> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:subPropertyOf owl:topObjectProperty ;
+                                                                  rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                  rdfs:range <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness> ;
+                                                                  rdfs:label "hasRelatedWeakness" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEAbstraction
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEAbstraction> rdf:type owl:DatatypeProperty ;
+                                                              rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                              rdfs:range xsd:string ;
+                                                              rdfs:label "CWEAbstraction" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEId
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEId> rdf:type owl:DatatypeProperty ;
+                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                     rdfs:range xsd:string ;
+                                                     rdfs:label "CWEId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEName
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEName> rdf:type owl:DatatypeProperty ;
+                                                       rdfs:subPropertyOf owl:topDataProperty ;
+                                                       rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                       rdfs:range xsd:string ;
+                                                       rdfs:label "CWEName" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEStatus
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEStatus> rdf:type owl:DatatypeProperty ;
+                                                         rdfs:subPropertyOf owl:topDataProperty ;
+                                                         rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                         rdfs:range xsd:string ;
+                                                         rdfs:label "CWEStatus" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEStructure
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWEStructure> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                            rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                            rdfs:range xsd:string ;
+                                                            rdfs:label "CWEStructure" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#applicablePlatformLanguage
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#applicablePlatformLanguage> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                          rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#AplicablePlatform> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:label "applicablePlatformLanguage" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#applicablePlatformParadigm
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#applicablePlatformParadigm> rdf:type owl:DatatypeProperty ;
+                                                                          rdfs:subPropertyOf owl:topDataProperty ;
+                                                                          rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#AplicablePlatform> ;
+                                                                          rdfs:range xsd:string ;
+                                                                          rdfs:label "applicablePlatformParadigm" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#applicablePlatformTechnology
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#applicablePlatformTechnology> rdf:type owl:DatatypeProperty ;
+                                                                            rdfs:subPropertyOf owl:topDataProperty ;
+                                                                            rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#AplicablePlatform> ;
+                                                                            rdfs:range xsd:string ;
+                                                                            rdfs:label "applicablePlatformTechnology" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#consequenceImpact
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#consequenceImpact> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                                                 rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CommonConsequence> ;
+                                                                 rdfs:range xsd:string ;
+                                                                 rdfs:label "consequenceImpact" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#consequenceNote
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#consequenceNote> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CommonConsequence> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:label "consequenceNote" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#consequenceScope
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#consequenceScope> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:subPropertyOf owl:topDataProperty ;
+                                                                rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CommonConsequence> ;
+                                                                rdfs:range xsd:string ;
+                                                                rdfs:label "consequenceScope" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#description
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#description> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                           rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                           rdfs:range xsd:string ;
+                                                           rdfs:label "description" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#detectionDescription
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#detectionDescription> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                    rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#DetectionMethod> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:label "detectionDescription" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#detectionEffectiveness
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#detectionEffectiveness> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#DetectionMethod> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:label "detectionEffectiveness" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#detectionMethod
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#detectionMethod> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#DetectionMethod> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:label "detectionMethod" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#extendedDescription
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#extendedDescription> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "extendedDescription" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#likelihoodOfExploit
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#likelihoodOfExploit> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                                   rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                   rdfs:range xsd:string ;
+                                                                   rdfs:label "likelihoodOfExploit" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#mitigationDescription
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#mitigationDescription> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#PotentialMitigation> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:label "mitigationDescription" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#mitigationPhase
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#mitigationPhase> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                               rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#PotentialMitigation> ;
+                                                               rdfs:range xsd:string ;
+                                                               rdfs:label "mitigationPhase" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#modeOfIntroductionNote
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#modeOfIntroductionNote> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#ModeOfIntroduction> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:label "modeOfIntroductionNote" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#modeOfIntroductionNotePhase
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#modeOfIntroductionNotePhase> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                                                           rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#ModeOfIntroduction> ;
+                                                                           rdfs:range xsd:string ;
+                                                                           rdfs:label "modeOfIntroductionNotePhase" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessCWEId
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessCWEId> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:subPropertyOf owl:topDataProperty ;
+                                                                    rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness> ;
+                                                                    rdfs:range xsd:string ;
+                                                                    rdfs:label "relatedWeaknessCWEId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessNature
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessNature> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:label "relatedWeaknessNature" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessOrdinal
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessOrdinal> rdf:type owl:DatatypeProperty ;
+                                                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                                                      rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness> ;
+                                                                      rdfs:range xsd:string ;
+                                                                      rdfs:label "relatedWeaknessOrdinal" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessViewId
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#relatedWeaknessViewId> rdf:type owl:DatatypeProperty ;
+                                                                     rdfs:subPropertyOf owl:topDataProperty ;
+                                                                     rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness> ;
+                                                                     rdfs:range xsd:string ;
+                                                                     rdfs:label "relatedWeaknessViewId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#weaknessOrdinality
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#weaknessOrdinality> rdf:type owl:DatatypeProperty ;
+                                                                  rdfs:subPropertyOf owl:topDataProperty ;
+                                                                  rdfs:domain <http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> ;
+                                                                  rdfs:range xsd:string ;
+                                                                  rdfs:label "weaknessOrdinality" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#AplicablePlatform
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#AplicablePlatform> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf owl:Thing ;
+                                                                 rdfs:label "AplicablePlatform" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CWE> rdf:type owl:Class ;
+                                                   rdfs:subClassOf owl:Thing ;
+                                                   rdfs:label "CWE" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CommonConsequence
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#CommonConsequence> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf owl:Thing ;
+                                                                 rdfs:label "CommonConsequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#DetectionMethod
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#DetectionMethod> rdf:type owl:Class ;
+                                                               rdfs:subClassOf owl:Thing ;
+                                                               rdfs:label "DetectionMethod" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#ModeOfIntroduction
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#ModeOfIntroduction> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf owl:Thing ;
+                                                                  rdfs:label "ModeOfIntroduction" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#PotentialMitigation
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#PotentialMitigation> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf owl:Thing ;
+                                                                   rdfs:label "PotentialMitigation" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/cwe#RelatedWeakness> rdf:type owl:Class ;
+                                                               rdfs:subClassOf owl:Thing ;
+                                                               rdfs:label "RelatedWeakness" .
+
+
+###  Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi

@@ -1,0 +1,245 @@
+@prefix : <http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://sepses.ifs.tuwien.ac.at/vocab/ref/snort> .
+
+<http://sepses.ifs.tuwien.ac.at/vocab/ref/snort> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#hasClassType
+:hasClassType rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Snort ;
+              rdfs:range :ClassType ;
+              rdfs:label "hasClassType" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#hasDestinationIP
+:hasDestinationIP rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf owl:topObjectProperty ;
+                  rdfs:domain :Snort ;
+                  rdfs:range :IPAddress ;
+                  rdfs:label "hasDestinationIP" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#hasProtocol
+:hasProtocol rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Snort ;
+             rdfs:range :Protocol ;
+             rdfs:label "hasProtocol" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#hasReference
+:hasReference rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf owl:topObjectProperty ;
+              rdfs:domain :Snort ;
+              rdfs:range :Reference ;
+              rdfs:label "hasReference" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#hasSourceIP
+:hasSourceIP rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf owl:topObjectProperty ;
+             rdfs:domain :Snort ;
+             rdfs:range :IPAddress ;
+             rdfs:label "hasSourceIP" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#acknowledge
+:acknowledge rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Snort ;
+             rdfs:range xsd:integer ;
+             rdfs:label "acknowledge" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#destinationPort
+:destinationPort rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf owl:topDataProperty ;
+                 rdfs:domain :Snort ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "destinationPort" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#flag
+:flag rdf:type owl:DatatypeProperty ;
+      rdfs:subPropertyOf owl:topDataProperty ;
+      rdfs:domain :Snort ;
+      rdfs:range rdfs:Literal ;
+      rdfs:label "flag" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#generatorId
+:generatorId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Snort ;
+             rdfs:range xsd:integer ;
+             rdfs:label "generatorId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpCode
+:icmpCode rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Snort ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "icmpCode" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpId
+:icmpId rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Snort ;
+        rdfs:range xsd:integer ;
+        rdfs:label "icmpId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpSequence
+:icmpSequence rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf owl:topDataProperty ;
+              rdfs:domain :Snort ;
+              rdfs:range xsd:integer ;
+              rdfs:label "icmpSequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpType
+:icmpType rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Snort ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "icmpType" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#identification
+:identification rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Snort ;
+                rdfs:range xsd:integer ;
+                rdfs:label "identification" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#length
+:length rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Snort ;
+        rdfs:range xsd:integer ;
+        rdfs:label "length" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#message
+:message rdf:type owl:DatatypeProperty ;
+         rdfs:subPropertyOf owl:topDataProperty ;
+         rdfs:domain :Snort ;
+         rdfs:range rdfs:Literal ;
+         rdfs:label "message" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#priority
+:priority rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Snort ;
+          rdfs:range xsd:integer ;
+          rdfs:label "priority" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sequence
+:sequence rdf:type owl:DatatypeProperty ;
+          rdfs:subPropertyOf owl:topDataProperty ;
+          rdfs:domain :Snort ;
+          rdfs:range rdfs:Literal ;
+          rdfs:label "sequence" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureId
+:signatureId rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Snort ;
+             rdfs:range xsd:integer ;
+             rdfs:label "signatureId" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureRevision
+:signatureRevision rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain :Snort ;
+                   rdfs:range xsd:integer ;
+                   rdfs:label "signatureRevision" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sourcePort
+:sourcePort rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Snort ;
+            rdfs:range xsd:integer ;
+            rdfs:label "sourcePort" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#timeToLive
+:timeToLive rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain :Snort ;
+            rdfs:range rdfs:Literal ;
+            rdfs:label "timeToLive" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#typeOfService
+:typeOfService rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Snort ;
+               rdfs:range rdfs:Literal ;
+               rdfs:label "typeOfService" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#window
+:window rdf:type owl:DatatypeProperty ;
+        rdfs:subPropertyOf owl:topDataProperty ;
+        rdfs:domain :Snort ;
+        rdfs:range rdfs:Literal ;
+        rdfs:label "window" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#ClassType
+:ClassType rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing ;
+           rdfs:label "ClassType" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#IPAddress
+:IPAddress rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing ;
+           rdfs:label "IPAddress" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Protocol
+:Protocol rdf:type owl:Class ;
+          rdfs:subClassOf owl:Thing ;
+          rdfs:label "Protocol" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Reference
+:Reference rdf:type owl:Class ;
+           rdfs:subClassOf owl:Thing ;
+           rdfs:label "Reference" .
+
+
+###  http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Snort
+:Snort rdf:type owl:Class ;
+       rdfs:subClassOf owl:Thing ;
+       rdfs:label "Snort" .
+
+
+###  Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi
