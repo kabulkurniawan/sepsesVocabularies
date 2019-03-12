@@ -1,0 +1,395 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://webprotege.stanford.edu/project/MganhDTvFWrdiIiwBZCJX#"
+     xml:base="http://webprotege.stanford.edu/project/MganhDTvFWrdiIiwBZCJX"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://webprotege.stanford.edu/project/MganhDTvFWrdiIiwBZCJX"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasConsequence -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasConsequence">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence"/>
+        <rdfs:label>hasConsequence</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasExecutionFlow -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasExecutionFlow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow"/>
+        <rdfs:label>hasExecutionFlow</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedAttackPattern -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedAttackPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern"/>
+        <rdfs:label>hasRelatedAttackPattern</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedWeakness -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasRelatedWeakness">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedWeakness"/>
+        <rdfs:label>hasRelatedWeakness</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasSkillRequired -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasSkillRequired">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired"/>
+        <rdfs:label>hasSkillRequired</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECAbstraction -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECAbstraction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>CAPECAbstraction</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>CAPECId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECName -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>CAPECName</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECStatus -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>CAPECStatus</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECdescription -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPECdescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>CAPECdescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStep -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStep">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>attackStep</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>attackStepDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepPhase -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepPhase">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>attackStepPhase</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepTechnique -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#attackStepTechnique">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>attackStepTechnique</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceImpact -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceImpact">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>consequenceImpact</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceScope -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#consequenceScope">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>consequenceScope</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasMitigation -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#hasMitigation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#likelihoodOfAttack -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#likelihoodOfAttack">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>likelihoodOfAttack</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#prerequisites -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#prerequisites">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>prerequisites</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternCAPECId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternCAPECId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>relatedAttackPatternCAPECId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternNature -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternNature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>relatedAttackPatternNature</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternViewId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#relatedAttackPatternViewId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>relatedAttackPatternViewId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#resourceRequired -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#resourceRequired">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>resourceRequired</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillDescription -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillDescription">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>skillDescription</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillLevel -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#skillLevel">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>skillLevel</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#typicalSeverity -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#typicalSeverity">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>typicalSeverity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#CAPEC">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>CAPEC</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Consequence">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Consequence</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#ExecutionFlow">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>ExecutionFlow</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Mitigation -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#Mitigation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Mitigation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedAttackPattern">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>RelatedAttackPattern</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedWeakness -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#RelatedWeakness">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>RelatedWeakness</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/capec#SkillRequired">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>SkillRequired</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.3.1) https://github.com/owlcs/owlapi -->
+
