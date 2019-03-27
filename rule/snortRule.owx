@@ -1,1938 +1,1229 @@
 <?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+<rdf:RDF xmlns="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#"
      xml:base="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule">
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Declaration>
-        <Class IRI="http://purl.org/sepses/vocab/log/coreLog#Host"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#ClassType"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Protocol"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Reference"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Action"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Metadata"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RuleHeader"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#RuleOption"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#SnortRule"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasAction"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasClassType"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasDestinationIP"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasMetadata"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasProtocol"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasReference"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasRuleHeader"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasRuleOption"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#hasSourceIP"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ack"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#asn1"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#base64Data"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#base64Decode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#byteExtract"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#byteJump"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#byteMath"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#byteTest"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#content"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#cvs"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#dceIface"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#dceOpnum"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#dceStubData"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#depth"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#destinationPort"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#distance"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#dsize"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#fastPattern"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#fileData"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#flags"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#flow"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#flowbits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#fragbits"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#fragoffset"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ftpbounce"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#gid"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#gtpInfo"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#gtpType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#gtpVersion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasBuqtraqId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasCVEId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hasNessusId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#hash"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpClientBody"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpCookie"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpEncode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpHeader"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpMethod"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpRawCookie"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpRawHeader"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpRawUri"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpStatCode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpStatMsg"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#httpUri"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#icmpCode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#icmpId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#icmpSeq"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#icmpType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#id"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ipProto"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ipopts"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#isdataat"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#length"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#msg"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#nocase"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#offset"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#operator"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#pcre"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#pktData"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#priority"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#protectedContent"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#rawbytes"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#rev"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#rpc"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sameip"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sequence"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sid"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sipBody"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sipHeader"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sipMethod"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sipStatCode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sourcePort"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sslState"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#sslVersion"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#streamReassemble"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#streamSize"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#tos"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#ttl"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#uricontent"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#urilen"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#url"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#window"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="#within"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpCode"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#message"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#topDataProperty"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#typeOfService"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#identification"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#priority"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#destinationPort"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#timeToLive"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sourcePort"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#generatorId"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="owl:flag"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureRevision"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#length"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sequence"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpSequence"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#window"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#acknowledge"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpId"/>
-    </Declaration>
-    <SubClassOf>
-        <Class IRI="#Action"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Metadata"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RuleHeader"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#RuleOption"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#SnortRule"/>
-        <Class abbreviatedIRI="owl:Thing"/>
-    </SubClassOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasAction"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasClassType"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasDestinationIP"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasMetadata"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasProtocol"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasReference"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasRuleOption"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#hasSourceIP"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasAction"/>
-        <Class IRI="#RuleOption"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasClassType"/>
-        <Class IRI="#RuleOption"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasDestinationIP"/>
-        <Class IRI="#RuleHeader"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasMetadata"/>
-        <Class IRI="#RuleOption"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasProtocol"/>
-        <Class IRI="#RuleHeader"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasReference"/>
-        <Class IRI="#RuleOption"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="#hasSourceIP"/>
-        <Class IRI="#RuleHeader"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasAction"/>
-        <Class IRI="#Action"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasClassType"/>
-        <Class IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#ClassType"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasDestinationIP"/>
-        <Class IRI="http://purl.org/sepses/vocab/log/coreLog#Host"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasMetadata"/>
-        <Class IRI="#Metadata"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasProtocol"/>
-        <Class IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Protocol"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasReference"/>
-        <Class IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Reference"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="#hasSourceIP"/>
-        <Class IRI="http://purl.org/sepses/vocab/log/coreLog#Host"/>
-    </ObjectPropertyRange>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#ack"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#acknowledge"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#asn1"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#base64Data"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#base64Decode"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#byteExtract"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#byteJump"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#byteMath"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#byteTest"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#cvs"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#dceIface"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#dceOpnum"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#dceStubData"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#destinationPort"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#destinationPort"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#dsize"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#fastPattern"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#fileData"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#flags"/>
-        <DataProperty abbreviatedIRI="owl:flag"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#flow"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#flowbits"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#fragbits"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#fragoffset"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#ftpbounce"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#gid"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#generatorId"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#gtpInfo"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#gtpType"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#gtpVersion"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasBuqtraqId"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasCVEId"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#hasNessusId"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpClientBody"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpCookie"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpEncode"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpHeader"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpMethod"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpRawHeader"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpRawUri"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpStatCode"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpStatMsg"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#httpUri"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#icmpCode"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpCode"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#icmpId"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpId"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#icmpSeq"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpSequence"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#icmpType"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#id"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#identification"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#ipProto"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#ipopts"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#isdataat"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#length"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#length"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#length"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#msg"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#message"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#offset"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#operator"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#pcre"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#pktData"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#priority"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#priority"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#rawbytes"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#rev"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureRevision"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#rpc"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sameip"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sequence"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sequence"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sid"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureId"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sipBody"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sipHeader"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sipMethod"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sipStatCode"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sourcePort"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sourcePort"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#sslVersion"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#streamReassemble"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#streamSize"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#tos"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#typeOfService"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#ttl"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#timeToLive"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#uricontent"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#urilen"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#url"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#window"/>
-        <DataProperty IRI="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#window"/>
-    </SubDataPropertyOf>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ack"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#asn1"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#base64Data"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#base64Decode"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#byteExtract"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#byteJump"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#byteMath"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#byteTest"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#content"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#cvs"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dceIface"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dceOpnum"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dceStubData"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#depth"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#destinationPort"/>
-        <Class IRI="#RuleHeader"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#distance"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#dsize"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#fastPattern"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#fileData"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#flags"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#flow"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#flowbits"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#fragbits"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#fragoffset"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ftpbounce"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#gid"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#gtpInfo"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#gtpType"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#gtpVersion"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasBuqtraqId"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasCVEId"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hasNessusId"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#hash"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpClientBody"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpCookie"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpEncode"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpHeader"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpMethod"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpRawCookie"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpRawHeader"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpRawUri"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpStatCode"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpStatMsg"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#httpUri"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#icmpCode"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#icmpId"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#icmpSeq"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#icmpType"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#id"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ipProto"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ipopts"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#isdataat"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#length"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#msg"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#nocase"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#offset"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#operator"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#pcre"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#pktData"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#priority"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#protectedContent"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#rawbytes"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#rev"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#rpc"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sameip"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sequence"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sid"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sipBody"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sipHeader"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sipMethod"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sipStatCode"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sourcePort"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sslState"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#sslVersion"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#streamReassemble"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#streamSize"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#tos"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#ttl"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#uricontent"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#urilen"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#url"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#window"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="#within"/>
-        <Class IRI="#RuleOption"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="#ack"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#asn1"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#base64Data"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#base64Decode"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#byteExtract"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#byteJump"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#byteMath"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#byteTest"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#content"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#cvs"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#dceIface"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#dceOpnum"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#dceStubData"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#depth"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#destinationPort"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#distance"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#dsize"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#fastPattern"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#fileData"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#flags"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#flow"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#flowbits"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#fragbits"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#fragoffset"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#ftpbounce"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#gid"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#gtpInfo"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#gtpType"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#gtpVersion"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasBuqtraqId"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasCVEId"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hasNessusId"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#hash"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpClientBody"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpCookie"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpEncode"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpHeader"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpMethod"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpRawCookie"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpRawHeader"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpRawUri"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpStatCode"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpStatMsg"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#httpUri"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#icmpCode"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#icmpId"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#icmpSeq"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#icmpType"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#id"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#ipProto"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#ipopts"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#isdataat"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#length"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#length"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#msg"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#nocase"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#offset"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#operator"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#pcre"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#pktData"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#priority"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#protectedContent"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#rawbytes"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#rev"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#rpc"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sameip"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sequence"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sid"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sipBody"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sipHeader"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sipMethod"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sipStatCode"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sourcePort"/>
-        <Datatype abbreviatedIRI="xsd:integer"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sslState"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#sslVersion"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#streamReassemble"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#streamSize"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#tos"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#ttl"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#uricontent"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#urilen"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#url"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#window"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#within"/>
-        <Datatype abbreviatedIRI="rdfs:Literal"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Action</IRI>
-        <Literal>Action</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#Metadata</IRI>
-        <Literal>Metadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#RuleHeader</IRI>
-        <Literal>RuleHeader</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#RuleOption</IRI>
-        <Literal>RuleOption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#SnortRule</IRI>
-        <Literal>SnortRule</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ack</IRI>
-        <Literal>acknowledge</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#asn1</IRI>
-        <Literal>asn1</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#base64Data</IRI>
-        <Literal>base64Data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#base64Decode</IRI>
-        <Literal>base64Decode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#byteExtract</IRI>
-        <Literal>byteExtract</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#byteJump</IRI>
-        <Literal>byteJump</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#byteMath</IRI>
-        <Literal>byteMath</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#byteTest</IRI>
-        <Literal>byteTest</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#content</IRI>
-        <Literal>content</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#cvs</IRI>
-        <Literal>cvs</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dceIface</IRI>
-        <Literal>dceIface</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dceOpnum</IRI>
-        <Literal>dceOpnum</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dceStubData</IRI>
-        <Literal>dceStubdata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#depth</IRI>
-        <Literal>depth</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#destinationPort</IRI>
-        <Literal>destinationPort</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#distance</IRI>
-        <Literal>distance</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#dsize</IRI>
-        <Literal>dsize</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fastPattern</IRI>
-        <Literal>fastPattern</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fileData</IRI>
-        <Literal>fileData</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#flags</IRI>
-        <Literal>flags</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#flow</IRI>
-        <Literal>flow</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#flowbits</IRI>
-        <Literal>flowbits</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fragbits</IRI>
-        <Literal>fragbits</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#fragoffset</IRI>
-        <Literal>fragoffset</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ftpbounce</IRI>
-        <Literal>ftpbounce</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#gid</IRI>
-        <Literal>generatorId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#gtpInfo</IRI>
-        <Literal>gtpInfo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#gtpType</IRI>
-        <Literal>gtpType</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#gtpVersion</IRI>
-        <Literal>gtpVersion</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasAction</IRI>
-        <Literal>hasAction</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasBuqtraqId</IRI>
-        <Literal>hasBuqtraqId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasCVEId</IRI>
-        <Literal>hasCVEId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasClassType</IRI>
-        <Literal>hasClassType</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasDestinationIP</IRI>
-        <Literal>hasDestinationIP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasMetadata</IRI>
-        <Literal>hasMetadata</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasNessusId</IRI>
-        <Literal>hasNessusId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasProtocol</IRI>
-        <Literal>hasProtocol</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasReference</IRI>
-        <Literal>hasReference</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasRuleHeader</IRI>
-        <Literal>hasRuleHeader</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasRuleOption</IRI>
-        <Literal>hasRuleOption</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hasSourceIP</IRI>
-        <Literal>hasSourceIP</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#hash</IRI>
-        <Literal>hash</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpClientBody</IRI>
-        <Literal>httpClientBody</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpCookie</IRI>
-        <Literal>httpCookie</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpEncode</IRI>
-        <Literal>httpEncode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpHeader</IRI>
-        <Literal>httpHeader</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpMethod</IRI>
-        <Literal>httpMethod</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpRawCookie</IRI>
-        <Literal>httpRawCookie</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpRawHeader</IRI>
-        <Literal>httpRawHeader</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpRawUri</IRI>
-        <Literal>httpRawUri</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpStatCode</IRI>
-        <Literal>httpStatCode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpStatMsg</IRI>
-        <Literal>httpStatMsg</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#httpUri</IRI>
-        <Literal>httpUri</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#icmpCode</IRI>
-        <Literal>icmpCode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#icmpId</IRI>
-        <Literal>icmpId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#icmpSeq</IRI>
-        <Literal>icmpSequence</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#icmpType</IRI>
-        <Literal>icmpType</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#id</IRI>
-        <Literal>identification</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ipProto</IRI>
-        <Literal>ipProto</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ipopts</IRI>
-        <Literal>ipopts</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#isdataat</IRI>
-        <Literal>isdataat</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#length</IRI>
-        <Literal>length</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#msg</IRI>
-        <Literal>message</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#nocase</IRI>
-        <Literal>nocase</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#offset</IRI>
-        <Literal>offset</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#operator</IRI>
-        <Literal>operator</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#pcre</IRI>
-        <Literal>pcre</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#pktData</IRI>
-        <Literal>pktData</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#priority</IRI>
-        <Literal>priority</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#protectedContent</IRI>
-        <Literal>protectedContent</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#rawbytes</IRI>
-        <Literal>rawbytes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#rev</IRI>
-        <Literal>signatureRevision</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#rpc</IRI>
-        <Literal>rpc</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sameip</IRI>
-        <Literal>sameip</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sequence</IRI>
-        <Literal>sequence</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sid</IRI>
-        <Literal>signatureId</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sipBody</IRI>
-        <Literal>sipBody</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sipHeader</IRI>
-        <Literal>sipHeader</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sipMethod</IRI>
-        <Literal>sipMethod</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sipStatCode</IRI>
-        <Literal>sipStatCode</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sourcePort</IRI>
-        <Literal>sourcePort</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sslState</IRI>
-        <Literal>sslState</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#sslVersion</IRI>
-        <Literal>sslVersion</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#streamReassemble</IRI>
-        <Literal>streamReassemble</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#streamSize</IRI>
-        <Literal>streamSize</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#tos</IRI>
-        <Literal>typeOfService</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#ttl</IRI>
-        <Literal>timeToLive</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#uricontent</IRI>
-        <Literal>uricontent</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#urilen</IRI>
-        <Literal>urilen</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#url</IRI>
-        <Literal>url</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#window</IRI>
-        <Literal>window</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#within</IRI>
-        <Literal>within</Literal>
-    </AnnotationAssertion>
-</Ontology>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasAction -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasAction">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#Action"/>
+        <rdfs:label>hasAction</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasClassType -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasClassType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#ClassType"/>
+        <rdfs:label>hasClassType</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasDestinationIP -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasDestinationIP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleHeader"/>
+        <rdfs:range rdf:resource="http://purl.org/sepses/vocab/log/coreLog#Host"/>
+        <rdfs:label>hasDestinationIP</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasMetadata -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasMetadata">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#Metadata"/>
+        <rdfs:label>hasMetadata</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasProtocol -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasProtocol">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleHeader"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Protocol"/>
+        <rdfs:label>hasProtocol</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasReference -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasReference">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Reference"/>
+        <rdfs:label>hasReference</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasRuleHeader -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasRuleHeader">
+        <rdfs:label>hasRuleHeader</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasRuleOption -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasRuleOption">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label>hasRuleOption</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasSourceIP -->
+
+    <owl:ObjectProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasSourceIP">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleHeader"/>
+        <rdfs:range rdf:resource="http://purl.org/sepses/vocab/log/coreLog#Host"/>
+        <rdfs:label>hasSourceIP</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#acknowledge -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#acknowledge"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#destinationPort -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#destinationPort"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#generatorId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#generatorId"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpCode -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpCode"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpId"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpSequence -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpSequence"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#identification -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#identification"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#length -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#length"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#message -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#message"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#priority"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sequence -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sequence"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureId"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureRevision -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureRevision"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sourcePort -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sourcePort"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#timeToLive -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#timeToLive"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#topDataProperty -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#topDataProperty"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#typeOfService -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#typeOfService"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#window -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#window"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ack -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ack">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#acknowledge"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>acknowledge</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#asn1 -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#asn1">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>asn1</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#base64Data -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#base64Data">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>base64Data</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#base64Decode -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#base64Decode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>base64Decode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteExtract -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteExtract">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>byteExtract</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteJump -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteJump">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>byteJump</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteMath -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteMath">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>byteMath</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteTest -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#byteTest">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>byteTest</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#content -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#content">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>content</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#cvs -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#cvs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>cvs</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dceIface -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dceIface">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>dceIface</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dceOpnum -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dceOpnum">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>dceOpnum</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dceStubData -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dceStubData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>dceStubdata</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#depth -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#depth">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>depth</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#destinationPort -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#destinationPort">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#destinationPort"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleHeader"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>destinationPort</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#distance -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#distance">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>distance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dsize -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#dsize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>dsize</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fastPattern -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fastPattern">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>fastPattern</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fileData -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fileData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>fileData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#flags -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#flags">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#flag"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>flags</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#flow -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#flow">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>flow</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#flowbits -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#flowbits">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>flowbits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fragbits -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fragbits">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>fragbits</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fragoffset -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#fragoffset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>fragoffset</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ftpbounce -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ftpbounce">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>ftpbounce</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gid -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gid">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#generatorId"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>generatorId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gtpInfo -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gtpInfo">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>gtpInfo</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gtpType -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gtpType">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>gtpType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gtpVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#gtpVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>gtpVersion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasBuqtraqId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasBuqtraqId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>hasBuqtraqId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasCVEId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasCVEId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>hasCVEId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasNessusId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hasNessusId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>hasNessusId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hash -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#hash">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>hash</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpClientBody -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpClientBody">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpClientBody</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpCookie -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpCookie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpCookie</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpEncode -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpEncode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpEncode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpHeader -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpHeader">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpHeader</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpMethod</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpRawCookie -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpRawCookie">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpRawCookie</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpRawHeader -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpRawHeader">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpRawHeader</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpRawUri -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpRawUri">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpRawUri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpStatCode -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpStatCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpStatCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpStatMsg -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpStatMsg">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpStatMsg</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpUri -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#httpUri">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>httpUri</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpCode -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpCode">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpCode"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>icmpCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpId -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpId">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpId"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>icmpId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpSeq -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpSeq">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#icmpSequence"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>icmpSequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpType -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#icmpType">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>icmpType</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#id -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#id">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#identification"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>identification</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ipProto -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ipProto">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>ipProto</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ipopts -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ipopts">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>ipopts</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#isdataat -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#isdataat">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>isdataat</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#length -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#length">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#length"/>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>length</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#msg -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#msg">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#message"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>message</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#nocase -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#nocase">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>nocase</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#offset -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#offset">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>offset</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#operator -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#operator">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>operator</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#pcre -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#pcre">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>pcre</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#pktData -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#pktData">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>pktData</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#priority -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#priority">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#priority"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>priority</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#protectedContent -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#protectedContent">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>protectedContent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#rawbytes -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#rawbytes">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>rawbytes</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#rev -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#rev">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureRevision"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>signatureRevision</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#rpc -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#rpc">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>rpc</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sameip -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sameip">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sameip</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sequence -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sequence">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sequence"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>sequence</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sid -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sid">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#signatureId"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>signatureId</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipBody -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipBody">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sipBody</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipHeader -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipHeader">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sipHeader</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipMethod -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipMethod">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sipMethod</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipStatCode -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sipStatCode">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sipStatCode</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sourcePort -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sourcePort">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#sourcePort"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>sourcePort</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sslState -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sslState">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sslState</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sslVersion -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#sslVersion">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>sslVersion</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#streamReassemble -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#streamReassemble">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>streamReassemble</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#streamSize -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#streamSize">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>streamSize</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#tos -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#tos">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#typeOfService"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>typeOfService</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ttl -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#ttl">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#timeToLive"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>timeToLive</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#uricontent -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#uricontent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>uricontent</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#urilen -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#urilen">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>urilen</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#url -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#url">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>url</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#window -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#window">
+        <rdfs:subPropertyOf rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#window"/>
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>window</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#within -->
+
+    <owl:DatatypeProperty rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#within">
+        <rdfs:domain rdf:resource="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>within</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#flag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/2002/07/owl#flag"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/sepses/vocab/log/coreLog#Host -->
+
+    <owl:Class rdf:about="http://purl.org/sepses/vocab/log/coreLog#Host"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#ClassType -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#ClassType"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Protocol -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Protocol"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Reference -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/ref/snort#Reference"/>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#Action -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#Action">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#Metadata -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#Metadata">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>Metadata</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleHeader -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleHeader">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>RuleHeader</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#RuleOption">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>RuleOption</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#SnortRule -->
+
+    <owl:Class rdf:about="http://sepses.ifs.tuwien.ac.at/vocab/rule/snortRule#SnortRule">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label>SnortRule</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
 
 
 
